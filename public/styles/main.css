@@ -1,0 +1,120 @@
+body {
+    background-color:#222;
+    color: whitesmoke;
+    font-family: sans;
+}
+
+.main_name {
+    font-size: 5vh;
+    color: #ffcc00;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.main_value {
+    font-size: 10vh;
+    line-height: 6rem;
+    font-weight: bold;
+    color: white;
+    margin-top: -10px;
+    text-align: center;
+}
+
+.tab_detail {
+    margin-top: 3vh;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 5vh;
+}
+
+.tab_detail th {
+    color: #ffcc00;
+}
+
+.tab_detail thead tr {
+    border: 1px solid white;
+}
+
+.tab_detail tbody {
+    border: 1px solid white;
+}
+
+.tab_detail tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.tab_detail th, .tab_detail td {
+    padding: 1vh;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    color: whitesmoke;
+}
+
+footer a {
+    color: white !important;
+    font-weight: bold;
+}
+
+.curr_main {
+    display: flex;
+}
+
+.curr_flag {
+    height: 4vh !important;
+    width: 6vh !important;
+}
+
+.curr_detail .curr_abv {
+    font-size: 3vh;
+    margin-left: 1vh;
+    color: #fc0;
+}
+
+.curr_value {
+    font-size: 6vh;
+    text-align: right;
+    font-weight: bold;
+}
+
+.card_det {
+    background-color: #333;
+    display: inline-block;
+    width: calc(32% - 15px);
+    margin-left: 5px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 1vh;
+}
+
+
+@media (max-width: 800px) {
+    
+    .main_name {
+        font-size: 4vh;
+    }
+    
+    .main_value {
+        font-size: 5vh;
+    }
+    
+    .card_det {
+        width: 92%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (801px <= width <= 1300px) {
+    .card_det {
+        width: 45%;
+    }
+}
+
+
+

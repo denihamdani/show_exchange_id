@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/main.css">
+        <link href="/styles/currency-flags.min.css " rel="stylesheet">
+        <title>Nilai Tukar Mata Uang</title>
+    </head>
+    <body>
+        <div style="margin-bottom: 2vh;">
+            <div class="main_name">Nilai Tukar Mata Uang</div>
+            <div class="main_value"><%= data.tanggal %></div>
+        </div>
+        <% data.list.forEach(detail => { %>
+        <div class="card_det">
+            <div class="curr_main">
+                <div class="curr_flag currency-flag currency-flag-<%= detail.toString().toLowerCase() %>"></div>
+                <div class="curr_detail">
+                    <div class="curr_abv"><%= detail %></div>
+                </div>
+            </div>
+            <div class="curr_value">
+                <%= currencyFormat.format(parseFloat(1/data.conversion_rates[detail]).toFixed(2)) %>
+            </div>
+        </div>
+        <% }) %>
+    </body>
+    <footer>
+        Source: <a href="https://www.exchangerate-api.com">Exchangerate API</a> - Last Update : <%= data.tanggalUpdate %><br/>
+        &copy; 2026 <a href="mailto:deni.hamdani.91@gmail.com">Deni Hamdani</a>
+    </footer>
+</html>
+
